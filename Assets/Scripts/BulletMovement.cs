@@ -4,12 +4,12 @@ public class BulletMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
 
-    private Rigidbody rb;
+    private Rigidbody2D rb;
 
     private Vector2 direction;
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void SetDirection(Vector2 dir)
