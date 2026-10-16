@@ -7,6 +7,9 @@ public class BulletMovement : MonoBehaviour
     private Rigidbody2D rb;
 
     private Vector2 direction;
+
+    private float timer;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -20,6 +23,11 @@ public class BulletMovement : MonoBehaviour
     private void Update()
     {
         rb.linearVelocity = direction * speed;
+        timer += Time.deltaTime;
+        if(timer > 5f)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
