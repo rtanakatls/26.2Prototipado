@@ -8,6 +8,7 @@ TagManager:
   - Flag
   - Ground
   - Score
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX
