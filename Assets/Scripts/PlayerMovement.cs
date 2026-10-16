@@ -34,6 +34,15 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
 
+        if (rb.linearVelocity.x < 0)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+        else if(rb.linearVelocity.x > 0)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
