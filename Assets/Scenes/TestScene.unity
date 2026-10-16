@@ -760,6 +760,7 @@ GameObject:
   - component: {fileID: 532327394}
   - component: {fileID: 532327393}
   - component: {fileID: 532327392}
+  - component: {fileID: 532327397}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -779,7 +780,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4315c2ccbdfc747ba5ab00d8e4dcde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
-  speed: 3
+  speed: 0
 --- !u!61 &532327393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -927,6 +928,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &532327397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532327391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a980633e7055343886227da519e3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyLife
+  life: 3
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
