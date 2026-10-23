@@ -6,11 +6,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float speed;
     [SerializeField] private float jumpForce;
+    private Animator animator;
     private bool isGrounded;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -33,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         }
+
+        animator.SetFloat("speed",Mathf.Abs(rb.linearVelocity.x));
 
         if (rb.linearVelocity.x < 0)
         {
